@@ -1,0 +1,23 @@
+[33mcommit 3c512152446ab6c0a4ec41451c0562108383aef2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: alannn-06 <alanchanatasig2006@gmail.com>
+Date:   Sun Apr 12 18:52:24 2026 -0500
+
+    Mover a la izquierda y derecha
+
+[33mcommit 66d5ca16c338048f9cba01e95a4821cbfadac24d[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: alannn-06 <alanchanatasig2006@gmail.com>
+Date:   Sun Apr 12 18:09:46 2026 -0500
+
+    Agregar dibujarSuelo y dibujarPersonaje
+
+[33mcommit c4f0bbea5a733daf97917dcb89a8bc231ed2cc34[m
+Author: alannn-06 <alanchanatasig2006@gmail.com>
+Date:   Sun Apr 12 16:59:00 2026 -0500
+
+    agregar canva
+
+[33mcommit aa8e594774da9ca19bd1d9063a5e86ae2d027826[m
+Author: alannn-06 <alanchanatasig2006@gmail.com>
+Date:   Sun Apr 12 16:26:48 2026 -0500
+
+    archivos base con hoja de estilos referenciado
