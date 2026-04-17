@@ -84,6 +84,7 @@ function detectarAtrapado(){
         intervaloLimon = setInterval(bajarLimon, velocidadCaida);
     }
     if(puntaje == 10){
+        clearInterval(intervaloLimon);
         alert("Exprimiste el juego al maximo, GANASTE")
     }
 
@@ -96,6 +97,7 @@ function detectarPiso(){
         mostrarEnSpan("txtVidas",vidas);
     }
     if(vidas == 0){
+        clearInterval(intervaloLimon);
         alert("GAME OVER");
     }
 }
