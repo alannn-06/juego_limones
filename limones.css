@@ -1,103 +1,120 @@
+/* FUENTE TIPO PIXEL */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: 'Press Start 2P', monospace;
+  background: black;
   color: white;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.contenedor {
-  max-width: 850px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+/* EFECTO PANTALLA CRT */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
 }
 
-/* HEADER */
-.header h1 {
-  font-size: 2.5em;
-  margin-bottom: 5px;
+/* CONTENEDOR */
+.contenedor {
+  max-width: 800px;
+  margin: auto;
+  border: 3px solid white;
+  padding: 20px;
+  box-shadow: 0 0 20px white;
+}
+
+/* TEXTOS */
+h1 {
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 .subtitulo {
-  opacity: 0.7;
-  font-style: italic;
+  font-size: 10px;
+  opacity: 0.8;
 }
 
 .autor {
-  font-size: 0.9em;
-  opacity: 0.5;
+  font-size: 8px;
+  opacity: 0.6;
 }
 
 /* CANVAS */
 canvas {
-  background: radial-gradient(circle, #111827, #020617);
-  border: 4px solid #38bdf8;
-  border-radius: 12px;
+  background: black;
+  border: 3px solid white;
   display: block;
   margin: 20px auto;
-  box-shadow: 0 0 20px #38bdf8;
 }
 
-/* PANEL DE INFO */
+/* PANEL */
 .panel {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
   margin: 20px 0;
+  font-size: 12px;
 }
 
-.card {
-  background: #1e293b;
-  padding: 15px 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  min-width: 120px;
+.panel p {
+  margin: 10px 0;
 }
 
-.card span {
-  display: block;
-  font-size: 0.9em;
-  opacity: 0.7;
+/* PARPADEO RETRO */
+#txtPuntaje, #txtVidas {
+  animation: blink 1s infinite steps(2, start);
 }
 
-.card strong {
-  font-size: 1.8em;
-  color: #38bdf8;
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 /* BOTONES */
-.botones {
-  margin-top: 20px;
-}
-
 .botones button {
-  margin: 8px;
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background: linear-gradient(145deg, #38bdf8, #0284c7);
+  margin: 10px;
+  padding: 10px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  background: black;
   color: white;
-  transition: 0.2s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  border: 2px solid white;
+  cursor: pointer;
 }
 
+/* EFECTO HOVER TIPO ARCADE */
 .botones button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  background: white;
+  color: black;
 }
 
-/* BOTÓN REINICIAR DESTACADO */
-.btn-reiniciar {
-  background: linear-gradient(145deg, #f43f5e, #be123c);
+/* EFECTO "SELECCION" */
+.botones button:active {
+  transform: scale(0.95);
 }
 
-.btn-reiniciar:hover {
-  box-shadow: 0 8px 20px rgba(255, 0, 80, 0.6);
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ICONO */
+.icono {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%) contrast(200%);
 }

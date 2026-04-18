@@ -10,33 +10,23 @@
 <body onload="iniciar()">
   <div class="contenedor">
 
-    <header class="header">
-      <h1>🍋 Atrapar Limones</h1>
-      <p class="subtitulo">Si del cielo te caen limones...</p>
-      <h2 class="autor">Autor: Alan Chanatasig</h2>
-    </header>
+    <h1 class="titulo">
+  <img src="lemon.png" alt="icono limon" class="icono">ATRAPAR LIMONES</h1>
+    <p class="subtitulo">>> SI DEL CIELO TE CAEN LIMONES...</p>
+    <h2 class="autor">[ ALAN CHANATASIG ]</h2>
 
-    <section class="juego">
-      <canvas id="areaJuego" width="600" height="400"></canvas>
-    </section>
+    <canvas id="areaJuego" width="600" height="400"></canvas>
 
-    <section class="panel">
-      <div class="card">
-        <span>Puntaje</span>
-        <strong id="txtPuntaje">0</strong>
-      </div>
+    <div class="panel">
+      <p>PUNTAJE: <span id="txtPuntaje">0</span></p>
+      <p>VIDAS: <span id="txtVidas">3</span></p>
+    </div>
 
-      <div class="card">
-        <span>Vidas</span>
-        <strong id="txtVidas">3</strong>
-      </div>
-    </section>
-
-    <section class="botones">
-      <button onclick="moverIzquierda()">⬅ Izquierda</button>
-      <button onclick="moverDerecha()">Derecha ➡</button>
-      <button class="btn-reiniciar" onclick="reiniciar()">🔄 Reiniciar</button>
-    </section>
+    <div class="botones">
+      <button onclick="moverIzquierda()">← IZQ</button>
+      <button onclick="moverDerecha()">DER →</button>
+      <button onclick="reiniciar()">REINICIAR</button>
+    </div>
 
   </div>
 
