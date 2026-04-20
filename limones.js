@@ -28,17 +28,17 @@ function dibujarSuelo(){
 }
 
 function dibujarPersonaje(){
-    ctx.fillStyle="yellow";
+    ctx.fillStyle="blue";
     ctx.fillRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
 
 function moverIzquierda(){
- personajeX = personajeX-10;
+ personajeX = personajeX+10;
  actualizarPantalla();
 }
 
 function moverDerecha(){
- personajeX = personajeX+10;
+ personajeX = personajeX-10;
  actualizarPantalla();
 }
 
@@ -98,7 +98,7 @@ function detectarPiso(){
     }
     if(vidas == 0){
         clearInterval(intervaloLimon);
-        alert("GAME OVER");
+        alert("Juego Terminado");
     }
 }
 
